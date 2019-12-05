@@ -1,0 +1,21 @@
+<script>
+    /*打开提示框*/
+    $(function () {
+        $('[data-toggle="popover"]').popover()
+    });
+</script>
+<img src="img/harmful.jpg" style="height: 120px;margin-right: 20px;margin-left: 5px">
+<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="top" data-content="有害垃圾指废电池、废灯管、废药品、废油漆及其容器等对人体健康或者自然环境造成直接或者潜在危害的生活废弃物。常见包括废电池、废荧光灯管、废灯泡、废水银温度计、废油漆桶、过期药品等。">
+    有害垃圾
+</button>
+<div class="progress progress-striped" style="margin: 0 0 0 15px;display:inline-block;width: 65%;height: 20px;vertical-align: middle">
+    <div class="progress-bar progress-bar-warning" role="progressbar" id="process_harmful"
+         aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+         style="width: 0%;">
+        <span id="harmful_acc">有害垃圾</span>
+    </div>
+</div>
+
+<button type="button" class="btn btn-success" style="margin-left: 20px">
+    选择
+</button>

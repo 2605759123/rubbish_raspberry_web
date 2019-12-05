@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // 初始化一个 WebSocket 对象
+        console.log('begin');
+        var ws = new WebSocket('ws://localhost:8002');
+
+
+        // 接收服务端数据时触发事件
+        ws.onmessage = function(evt) {
+            var received_msg = evt.data;
+            console.log('数据已接收...' + received_msg);
+        };
+    </script>
+</head>
+<body>
+
+</body>
+</html>

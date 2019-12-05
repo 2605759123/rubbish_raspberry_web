@@ -1,0 +1,127 @@
+
+
+<body>
+    <script>
+        /*打开提示框*/
+        $(function () {
+            $('[data-toggle="popover"]').popover()
+        })
+    </script>
+    <style>
+        .div-all{
+            width:100%;
+            height: 100%;
+            /*background: yellow;*/
+            position: fixed;
+        }
+        .top-left-text{
+            margin-left: 50px;
+            margin-top: 40px;
+            font-size: 80px;
+        }
+        .center-text{
+            position: fixed;
+            _position:absolute;
+            top: 50%;
+            left: 50%;
+            margin: -141px 0 0 -501px;
+            width: 1000px;
+            height:280px;
+            line-height: 280px;
+            text-align:center;
+            font-size: 80px;
+        }
+
+        .bottom-button{
+            position: absolute;
+            bottom: 30px;
+            align-content: center;
+            text-align: center;
+            width: 100%;
+        }
+        .bottom-text{
+            position: absolute;
+            bottom: 30px;
+            /*align-content: center;*/
+            /*text-align: center;*/
+            width: 100%;
+            font-size: 20px;
+        }
+
+        .location-text{
+            border: 1px solid #f00;
+            padding: 1px 1px 1px 1px;
+        }
+
+    </style>
+
+
+
+
+
+
+    <div class="div-all">
+        <div class="top-left-text">欢迎使用</div>
+        <div class="center-text" id="TemAndHum">温度：30°C 湿度：30%</div>
+        <div class="bottom-text">
+            <!--            <button type="button" class="btn btn-info btn-lg">查看使用教程</button>-->
+            <span id="status" style="margin-left: 10px"></span>
+            <!-- Modal -->
+
+        </div>
+        <div class="bottom-button">
+            <a style="font-size: 20px" data-toggle="modal" href="#myModal">查看使用教程</a>
+            <!-- Modal -->
+
+        </div>
+
+<!--        <button class="go-finish">333</button>-->
+
+
+
+    </div>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">使用教程</h4>
+                </div>
+                <div class="modal-body">
+                    <h3>这是什么？</h3>
+                    <p>这是一款智能垃圾桶,你无需关注垃圾种类，直接将垃圾交给我们即可。</p>
+                    <h3>如何使用？</h3>
+                    <p>请将垃圾放在垃圾桶上的识别处，然后刷卡便可。</p>
+                    <h3>我可以使用什么卡？</h3>
+                    <p>支持校园卡，门禁卡，只要是uid卡甚至是手机的nfc都是可以的。</p>
+                    <h3>为什么我需要刷卡？</h3>
+                    <p>刷卡是为了在您的账户上累计积分，你可以下载我们的APP，绑定账户后可以使用积分兑换礼品。我们不会读取也无法读取您卡上的信息，请您放心使用。</p>
+                    <hr>
+                    <h3>如何分类？</h3>
+                    <p>我们支持以下两种分类方式：
+                        <ul>
+                            <li>
+                                可回收物、有害垃圾、厨余垃圾、其他垃圾
+                                <a tabindex="0" class="btn btn-xs btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="支持的城市" data-content="北京、天津等城市">查看支持城市</a>
+                            </li>
+                            <li style="padding-top: 4px">
+                                可回收物、有害垃圾、湿垃圾、干垃圾
+                                <a tabindex="0" class="btn btn-xs btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="支持的城市" data-content="上海等城市">查看支持城市</a>
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
