@@ -213,6 +213,7 @@ def set_finish(uid, type1,score1,type2,score2,type3,score3,type4,score4):
     lists = '[{"type":"' + type1 + '","accuracy":"' + score1 + '"},{"type":"'+ type2 +'","accuracy":"'+score2+'"},{"type":"'+type3+'","accuracy":"'+score3+'"},{"type":"'+type4+'","accuracy":"'+score4+'"}]'
     msg = '{"name":"finish","uid":' + uid + ',"data":' + lists + '}'
     send_msg(writeable[-1], msg)
+    
 
 
 def set_back():
